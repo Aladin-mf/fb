@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bungee+Outline&family=Pacifico&family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Permanent Marker', cursive;
+  overflow: hidden;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.main a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 13px 29px 13px 29px;
+  border: 0.2rem solid #1f1e1e;
+  position: relative;
+  z-index: 1;
+  color: #363f4b;
+}
+
+.main a:hover {
+  color: #ffbf47;
+}
+
+.main a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1D242D;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  z-index: -1;
+}
+
+.main a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1D242D;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translatey(-100%);
+          transform: translatey(-100%);
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+  z-index: -1;
+}
+
+.main a:hover::after {
+  -webkit-transform: translatey(50%);
+          transform: translatey(50%);
+}
+
+.main a:hover::before {
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+}
+
+body::-moz-selection {
+  background-color: rgba(230, 14, 14, 0.726);
+  color: white;
+}
+
+body::selection {
+  background-color: rgba(230, 14, 14, 0.726);
+  color: white;
+}
+/*# sourceMappingURL=hi.css.map */
